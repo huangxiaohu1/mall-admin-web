@@ -119,7 +119,8 @@
               setCookie("password",this.loginForm.password,15);
               this.$router.push({path: '/'})
             }).catch(() => {
-              this.loading = false
+              this.loading = false;
+              this.$message.error("服务端异常,请稍后重试。或联系管理员处理！");
             })
           } else {
             console.log('参数验证不合法！');
